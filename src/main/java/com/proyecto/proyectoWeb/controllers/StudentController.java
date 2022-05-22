@@ -15,8 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RestController
-@RequestMapping("/student")
+
 public class StudentController {
 
     @Autowired
@@ -34,11 +33,7 @@ public class StudentController {
 
     //A continuación todos los GetMapping y PostMapping de tu proyecto. Dejo aquí dos Holas mundos de ejemplo.
 
-    @GetMapping("/hola")
-    public ResponseEntity<List<Student>> getAllClient() {
-        List<Student> list = c.getall();
-        return new ResponseEntity<List<Student>>(list, new HttpHeaders(), HttpStatus.OK);
-    }
+   
     
     @GetMapping("/welcome/{nombre}")
     public String welcome(Model model, @PathVariable String nombre){
@@ -48,7 +43,11 @@ public class StudentController {
 
     @GetMapping("/welcome")
     public String welcomeDefault(Model model){
-        model.addAttribute("persona", "desconocido");
+       
         return "welcome";
+    }
+    @GetMapping("/inicio")
+    public String Inicio(Model model) {
+    	return "inicio";
     }
 }

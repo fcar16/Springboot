@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"> //*Esto es obligatorio para que funcione Thymeleaf*//
+<html xmlns:th="http://www.thymeleaf.org"> 
 <head>
+ <link href="styles/style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
+  
+    
 </head>
 <body>
-<h1>Hola <span th:text="${persona}"></span></h1> //Uso de una variable pasado a traves de Model desde el controlador.
+
+<h1>Inicia Sesion</h1>
+ <style type="text/css">
+ h1{
+ 	text-align:center;
+ }
+ ul{
+ text-align:center;
+ }
+</style>
+<center>
+<form action="/inicio" >
+	<table border="5">
+		<tr>
+			<td>Usuario</td>
+			<td><input type="text" id="Usuario" name="user_Usuario"></td>
+		</tr>
+		<tr>
+			<td>Contraseña</td>
+			<td><input type="password" id="Contraseña" name="user_Contraseña"></td>
+		</tr>
+		</table>
+		<form action="/inicio" >
+		 <button type="submit">Inicia Sesion</button>
+		 </form>
+		 <form action=
+		  <button type="submit">Registrar</button>
+
+
+
+</center>
 </body>
 </html>
